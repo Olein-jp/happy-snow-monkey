@@ -399,9 +399,11 @@ add_action(
  */
 add_action(
 	'snow_monkey_append_entry_content',
-	function() { ?>
+	function() {
+		if ( ! is_page() ) {
+		?>
 			<a class="c-btn c-btn--block p-move-to-contact-btn" href="<?php echo esc_url( home_url( '/contact' ) ); ?>" role="button" target="_blank">「あれ？この情報、古くない？」と思ったらご連絡ください。</a>
-		<?php
+		<?php }
 	},
 	2,
 	1
