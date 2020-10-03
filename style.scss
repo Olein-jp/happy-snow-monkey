@@ -1,0 +1,283 @@
+//======================================================================
+// Variables
+//======================================================================
+$brand-color-1: #cd162c;
+$brand-color-2: #eaea25;
+$brand-color-3: #028ACC;
+$brand-color-4: #800110;
+$brand-color-5: #085980;
+
+
+
+//======================================================================
+// Media Query
+//======================================================================
+//-----------------------------------------------------
+// Minimal width
+//-----------------------------------------------------
+$breakpoint-up: (
+        'md' : 'screen and (min-width: 640px)',
+        'lg' : 'screen and (min-width: 1024px)',
+        'xl' : 'screen and (min-width: 1280px)',
+) !default;
+
+
+//-----------------------------------------------------
+// Max width
+//-----------------------------------------------------
+$breakpoint-down: (
+        'sm' : 'screen and (max-width: 639px)',
+        'md' : 'screen and (max-width: 1023px)',
+        'lg' : 'screen and (max-width: 1279px)',
+) !default;
+
+//-----------------------------------------------------
+// Set Mixin
+//-----------------------------------------------------
+@mixin media-breakpoint-up($breakpoint: sm) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint: lg) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
+/*--------------------------------------------------------------
+    animation
+--------------------------------------------------------------*/
+@keyframes blink{
+  0% { opacity: .75; }
+  100% { opacity: 1; }
+}
+
+/*--------------------------------------------------------------
+    Component
+--------------------------------------------------------------*/
+.c-hsm-message-box {
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+  color: $brand-color-1;
+}
+
+.c-blinking {
+  animation: blink 1s ease-in-out infinite alternate;
+}
+
+.c-btn {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 12px;
+
+  background-color: darken( $brand-color-1, 3% );
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, $brand-color-1), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, $brand-color-1),color-stop(.75, $brand-color-1), color-stop(.75, transparent),to(transparent));
+  -webkit-background-size: 14px 14px;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+  }
+}
+
+/*--------------------------------------------------------------
+    Project
+--------------------------------------------------------------*/
+//.p-hsm-drawer {
+//  margin: 15px;
+//  padding: 10px;
+//}
+
+.p-hsm-prepend-footer,
+.p-hsm-append-footer {
+  border-radius: 0;
+}
+
+.p-snow_monkey_prepend_drawer_nav {
+  margin: 15px;
+  padding: 10px;
+}
+
+.p-snow_monkey_append_drawer_nav {
+  margin: 15px;
+  padding: 10px;
+}
+
+.p-snow_monkey_prepend_body {
+  position: fixed;
+  display: inline-block;
+  left: 15px;
+  bottom: 60px;
+  color: #fff;
+  z-index: 10000;
+
+  background-color: darken( $brand-color-1, 3% );
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, $brand-color-1), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, $brand-color-1),color-stop(.75, $brand-color-1), color-stop(.75, transparent),to(transparent));
+  -webkit-background-size: 14px 14px;
+}
+
+.p-snow_monkey_prepend_footer {
+  border-radius: 0;
+}
+
+.p-snow_monkey_append_footer {
+  border-radius: 0;
+}
+
+.p-snow_monkey_prepend_sidebar {
+
+}
+
+.p-snow_monkey_append_sidebar {
+
+}
+
+.p-snow_monkey_prepend_main {
+  margin-bottom: 15px;
+}
+
+.p-snow_monkey_append_main {
+  margin-top: 50px;
+}
+
+.p-snow_monkey_prepend_contents {
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+
+.p-snow_monkey_append_contents {
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+
+.p-snow_monkey_before_contents_inner {
+  margin-bottom: 15px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}
+
+.p-snow_monkey_after_contents_inner {
+  margin-bottom: 30px;
+}
+
+.p-snow_monkey_prepend_entry_content {
+
+}
+
+.p-snow_monkey_append_entry_content {
+
+}
+
+.p-snow_monkey_before_entry_content {
+
+}
+
+.p-snow_monkey_after_entry_content {
+
+}
+
+.p-snow_monkey_append_archive_entry_content {
+
+}
+
+.p-snow_monkey_prepend_archive_entry_content {
+
+}
+
+.p-snow_monkey_entry_meta_items {
+  display: inline-block;
+  //background-color: $brand-color-1;
+  color: white!important;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/*--------------------------------------------------------------
+    Original Customize
+--------------------------------------------------------------*/
+.c-widget {
+  .c-entries--panel {
+    // サマリー内メタ情報を非表示
+    .c-entry-summary__meta {
+      display: none;
+    }
+
+    // 記事タイトル下マージンをなくして上下パディングのバランスを整える
+    .c-entry-summary__header {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.p-search-in-forum-button {
+  display: block;
+  @extend .c-btn;
+  line-height: 1.5;
+  font-weight: bold;
+
+  background-color: darken( $brand-color-3, 3% );
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, $brand-color-3), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, $brand-color-3),color-stop(.75, $brand-color-3), color-stop(.75, transparent),to(transparent));
+  -webkit-background-size: 14px 14px;
+  span {
+    display: inline-block;
+    background-color: darken( $brand-color-3, 10% );
+    padding: 3px 7px;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+}
+
+.p-move-to-contact-btn {
+  display: block;
+  @extend .c-btn;
+  line-height: 1.5;
+  font-weight: bold;
+
+  background-color: darken( $brand-color-2, 7% );
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, $brand-color-2), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, $brand-color-2),color-stop(.75, $brand-color-2), color-stop(.75, transparent),to(transparent));
+  -webkit-background-size: 14px 14px;
+
+  color: #333;
+}
+
+.c-entry-summary__figure {
+  .c-entry-summary__term {
+    top: 10px;
+    right: 10px;
+    box-shadow: 0 0 5px rgba( #000, .5 );
+    border-radius: 13px;
+    &_action-hook {
+      background-color: darken( $brand-color-1, 10% );
+    }
+    &_filter-hook {
+      background-color: darken( $brand-color-2, 15% );
+    }
+    &_news {
+      background-color: darken( $brand-color-4, 10% );
+    }
+    &_tips {
+      background-color: darken( $brand-color-3, 10% );
+    }
+  }
+}
+
+.tag-cloud-link {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f02b";
+    color: inherit;
+  }
+}
+
+.c-entry__body .c-entry-tags {
+  display: none;
+}
+
+/* wp profile box
+------------------------------*/
+@import "block-styles/wp-profile-box";
