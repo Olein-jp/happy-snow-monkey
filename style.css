@@ -135,11 +135,11 @@
   .c-entry-summary__figure .c-entry-summary__term_tips {
     background-color: #026899; }
 
-.tag-cloud-link {
+.c-entry-tags > .tag-cloud-link {
   background-color: transparent;
   border: none;
   color: inherit; }
-  .tag-cloud-link:before {
+  .c-entry-tags > .tag-cloud-link:before {
     font-family: "Font Awesome 5 Free";
     content: "\f02b";
     color: inherit; }

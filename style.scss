@@ -263,14 +263,16 @@ $breakpoint-down: (
   }
 }
 
-.tag-cloud-link {
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  &:before {
-    font-family: "Font Awesome 5 Free";
-    content: "\f02b";
+.c-entry-tags {
+  & > .tag-cloud-link {
+    background-color: transparent;
+    border: none;
     color: inherit;
+    &:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f02b";
+      color: inherit;
+    }
   }
 }
 

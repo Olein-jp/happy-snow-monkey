@@ -425,3 +425,21 @@ add_filter( 'snow_monkey_template_part_render',
 	10,
 	4
 );
+
+/**
+ * エントリーメタ情報にタグを追加
+ */
+add_action(
+	'snow_monkey_entry_meta_items',
+	function() {
+		if ( ! get_the_terms( get_the_ID(), 'post_tag' ) ) {
+			return;
+		}
+		?>
+		<li class="c-meta__item c-meta__item--tags">
+			<?php \Framework\Helper::get_template_part( 'template-parts/content/entry-tags' ); ?>
+		</li>
+		<?php
+	},
+	41
+);
