@@ -406,3 +406,20 @@ add_action(
 	2,
 	1
 );
+
+/**
+ * プロフィールボックスのタイトルを変更
+ */
+add_filter( 'snow_monkey_template_part_render',
+	function( $_html ) {
+		$_html = str_replace(
+			'<h2 class="wp-profile-box__title">' . esc_html__( 'Bio', 'inc2734-wp-profile-box' ) . '</h2>',
+			'<h2 class="wp-profile-box__title">HAPPY SNOW MONKEYの管理人情報</h2>',
+			$_html
+		);
+		return $_html;
+	}
+	,
+	10,
+	4
+);
