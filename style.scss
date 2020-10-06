@@ -283,3 +283,13 @@ $breakpoint-down: (
 /* wp profile box
 ------------------------------*/
 @import "block-styles/wp-profile-box";
+
+/* Core Blocks
+------------------------------*/
+.type-post,
+.type-page {
+  .p-entry-content {
+    @import "block-styles/under-is-root-container-blocks";
+    @import "block-styles/core-blocks";
+  }
+}

@@ -55,6 +55,16 @@ add_action(
 	}
 );
 
+/**
+ * import css file for editor
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		add_editor_style( '/../../plugins/happy-snow-monkey/editor-style.css' );
+	}
+);
+
 
 
 /**
