@@ -164,5 +164,26 @@
 
 /* Core Blocks
 ------------------------------*/
+.add-new-mark .c-entries--text2 .c-entry-summary__body {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 640px) {
+    .add-new-mark .c-entries--text2 .c-entry-summary__body {
+      flex-direction: inherit; } }
+.add-new-mark .c-entries--text2 .c-entry-summary__header {
+  order: 1;
+  margin-top: 10px; }
+  @media screen and (min-width: 640px) {
+    .add-new-mark .c-entries--text2 .c-entry-summary__header {
+      margin-top: 0;
+      margin-left: 10px; } }
+.add-new-mark .c-entries--text2 .c-entry-summary__meta {
+  order: 0;
+  margin-top: 0; }
+  @media screen and (min-width: 640px) {
+    .add-new-mark .c-entries--text2 .c-entry-summary__meta {
+      min-width: 280px; } }
+  .add-new-mark .c-entries--text2 .c-entry-summary__meta .c-meta__item--new .c-entry-summary__term {
+    background-color: #028ACC; }
 
 /*# sourceMappingURL=style.css.map */

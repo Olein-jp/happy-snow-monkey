@@ -293,3 +293,41 @@ $breakpoint-down: (
     @import "block-styles/core-blocks";
   }
 }
+
+
+.add-new-mark {
+  .c-entries--text2 {
+    .c-entry-summary {
+      &__body {
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(md) {
+          flex-direction: inherit;
+        }
+      }
+
+      &__header {
+        order: 1;
+        margin-top: 10px;
+        @include media-breakpoint-up(md) {
+          margin-top: 0;
+          margin-left: 10px;
+        }
+      }
+
+      &__meta {
+        order: 0;
+        margin-top: 0;
+        @include media-breakpoint-up(md) {
+          min-width: 280px;
+        }
+
+        .c-meta__item--new {
+          .c-entry-summary__term {
+            background-color: $brand-color-3;
+          }
+        }
+      }
+    }
+  }
+}
