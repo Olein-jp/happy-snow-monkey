@@ -319,7 +319,6 @@ $breakpoint-down: (
       &__meta {
         order: 0;
         margin-top: 0;
-        @include media-breakpoint-up(md) {
           min-width: 280px;
         }
 

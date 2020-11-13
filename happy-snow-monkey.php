@@ -453,3 +453,21 @@ add_action(
 	},
 	41
 );
+
+/**
+ * ショートコードを作成
+ */
+add_shortcode( 'hsm-shorcode-demo-name', 'hsm_shortcode_function_name' );
+
+function hsm_shortcode_function_name( $atts, $content = null ) {
+	$hsmshortcode = shortcode_atts( array(
+		'link' => '#',
+		'color' => 'blue',
+		'target' => '_self'
+	), $atts );
+	$output = '<a href="' . esc_url( $hsmshortcode[ 'link' ] ) . '" 
+	class="hsm-shortcode-demo-button hsm-shortcode-demo-button_' . $hsmshortcode[ 'color' ] . '" 
+	target="' . $hsmshortcode[ 'target' ] . '">' . esc_attr( $content ) . '</a>';
+	return $output;
+}
+add_action( 'init', 'hsm_shortcode_function_name' );
