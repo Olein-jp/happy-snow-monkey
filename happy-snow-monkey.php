@@ -119,7 +119,7 @@ add_action(
 	'snow_monkey_prepend_footer',
 	function() {
 		?>
-		<a class="c-btn c-btn--block c-blinking p-snow_monkey_prepend_footer" href="<?php echo esc_url( home_url( '/snow_monkey_prepend_body' ) ); ?>" role="button">snow_monkey_prepend_footer</a>
+		<a class="c-btn c-btn--block c-blinking p-snow_monkey_prepend_footer" href="<?php echo esc_url( home_url( '/snow_monkey_prepend_footer' ) ); ?>" role="button">snow_monkey_prepend_footer</a>
 		<?php
 	}
 );
