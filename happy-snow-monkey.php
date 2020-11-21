@@ -398,9 +398,7 @@ add_action(
 				<i class="fas fa-wrench"></i>
 			</a>
 		<?php
-	},
-	10,
-	1
+	}
 );
 
 /**
@@ -414,9 +412,7 @@ add_action(
 			<i class="fas fa-wrench"></i>
 		</a>
 		<?php
-	},
-	10,
-	1
+	}
 );
 
 /**
