@@ -388,6 +388,38 @@ add_filter(
 );
 
 /**
+ * snow_monkey_before_header_site_branding_column
+ */
+add_action(
+	'snow_monkey_before_header_site_branding_column',
+	function() {
+		?>
+			<a class="p-snow_monkey_before_header_site_branding_column c-btn c-blinking" href="<?php echo esc_url( home_url( '/snow_monkey_before_header_site_branding_column' ) ); ?>">
+				<i class="fas fa-wrench"></i>
+			</a>
+		<?php
+	},
+	10,
+	1
+);
+
+/**
+ * snow_monkey_after_header_site_branding_column
+ */
+add_action(
+	'snow_monkey_after_header_site_branding_column',
+	function() {
+		?>
+		<a class="p-snow_monkey_after_header_site_branding_column c-btn c-blinking" href="<?php echo esc_url( home_url( '/snow_monkey_after_header_site_branding_column' ) ); ?>">
+			<i class="fas fa-wrench"></i>
+		</a>
+		<?php
+	},
+	10,
+	1
+);
+
+/**
  * エントリー下に公式フォーラムで検索した結果を表示させるボタンを作る/アクション・フィルターフックカテゴリーのみ
  */
 add_action(
