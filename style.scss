@@ -322,11 +322,42 @@ $breakpoint-down: (
           min-width: 280px;
         }
 
-        .c-meta__item--new {
+      .c-meta__item--new {
           .c-entry-summary__term {
             background-color: $brand-color-3;
           }
         }
+    }
+  }
+}
+
+/* Snow Monkey Blocks - Sliderカスタマイズ
+------------------------------*/
+.customize-smb-slider.smb-spider-slider {
+  @include media-breakpoint-up(md) {
+    position: relative;
+  }
+  .smb-spider-slider__item { //キャプション部分全体
+    background-color: rgba( 0,0,0, .5 );
+  }
+  .smb-spider-slider__item__caption { //キャプションのテキスト
+    color: white;
+  }
+  .spider__dots {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      left: 0;
+      bottom: 51px;
+      z-index: 10;
+    }
+    justify-content: center;
+    .spider__dot {
+      flex: 0 0 20%;
+      @include media-breakpoint-up(md) {
+        flex: 0 0 10%;
+      }
+      img {
+        border-radius: 5px; //サムネイル画像を角丸に
       }
     }
   }

@@ -182,11 +182,34 @@
       margin-left: 10px; } }
 .add-new-mark .c-entries--text2 .c-entry-summary__meta {
   order: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  min-width: 280px; }
+.add-new-mark .c-entries--text2 .c-entry-summary .c-meta__item--new .c-entry-summary__term {
+  background-color: #028ACC; }
+
+/* Snow Monkey Blocks - Sliderカスタマイズ
+------------------------------*/
+@media screen and (min-width: 640px) {
+  .customize-smb-slider.smb-spider-slider {
+    position: relative; } }
+.customize-smb-slider.smb-spider-slider .smb-spider-slider__item {
+  background-color: rgba(0, 0, 0, 0.5); }
+.customize-smb-slider.smb-spider-slider .smb-spider-slider__item__caption {
+  color: white; }
+.customize-smb-slider.smb-spider-slider .spider__dots {
+  justify-content: center; }
   @media screen and (min-width: 640px) {
-    .add-new-mark .c-entries--text2 .c-entry-summary__meta {
-      min-width: 280px; } }
-  .add-new-mark .c-entries--text2 .c-entry-summary__meta .c-meta__item--new .c-entry-summary__term {
-    background-color: #028ACC; }
+    .customize-smb-slider.smb-spider-slider .spider__dots {
+      position: absolute;
+      left: 0;
+      bottom: 51px;
+      z-index: 10; } }
+  .customize-smb-slider.smb-spider-slider .spider__dots .spider__dot {
+    flex: 0 0 20%; }
+    @media screen and (min-width: 640px) {
+      .customize-smb-slider.smb-spider-slider .spider__dots .spider__dot {
+        flex: 0 0 10%; } }
+    .customize-smb-slider.smb-spider-slider .spider__dots .spider__dot img {
+      border-radius: 5px; }
 
 /*# sourceMappingURL=style.css.map */

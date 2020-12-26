@@ -367,7 +367,7 @@ add_action(
 /**
  * snow_monkey_display_contents_outline
  */
-add_filter( 'snow_monkey_display_contents_outline', '__return_true' );
+//add_filter( 'snow_monkey_display_contents_outline', '__return_true' );
 
 /**
  * snow_monkey_breadcrumbs
@@ -499,3 +499,15 @@ function hsm_shortcode_function_name( $atts, $content = null ) {
 	return $output;
 }
 add_action( 'init', 'hsm_shortcode_function_name' );
+
+/**
+ * FontAwesome ショートコード
+ */
+function hsm_add_fontawesome_icon( $atts ) {
+	extract( shortcode_atts( array(
+			'icon' => 'fab fa-wordpress',
+	), $atts ) );
+	$output = '<i class="' . $icon . '"></i>';
+	return $output;
+}
+add_shortcode( 'hsm-fa', 'hsm_add_fontawesome_icon' );
