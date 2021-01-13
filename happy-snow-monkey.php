@@ -511,3 +511,28 @@ function hsm_add_fontawesome_icon( $atts ) {
 	return $output;
 }
 add_shortcode( 'hsm-fa', 'hsm_add_fontawesome_icon' );
+
+//function hsm_add_fontawesome_icon( $atts ) {
+//	extract( shortcode_atts( array(
+//		'icon' => 'fab fa-wordpress',
+//		'link' => '',
+//		'target' => '_self',
+//	), $atts ) );
+//	$icon = '<i class="' . $icon . '"></i>';
+//	if ( $link ) {
+//		$output = '<a href="' . $link . '" target="' . $target . '">';
+//		$output .= $icon . '</a>';
+//		return $output;
+//	}
+//	return $icon;
+//}
+//add_shortcode( 'hsm-fa', 'hsm_add_fontawesome_icon' );
+
+add_filter( 'body_class', 'add_page_slug_class_name' );
+function add_page_slug_class_name( $classes ) {
+	if ( is_page() ) {
+		$page = get_post( get_the_ID() );
+		$classes[] = 'hsm-' . $page->post_name;
+	}
+	return $classes;
+}
