@@ -46,15 +46,7 @@
   padding: 10px; }
 
 .p-snow_monkey_prepend_body {
-  position: fixed;
-  display: inline-block;
-  left: 15px;
-  bottom: 60px;
-  color: #fff;
-  z-index: 10000;
-  background-color: #bf1529;
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #cd162c), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #cd162c), color-stop(0.75, #cd162c), color-stop(0.75, transparent), to(transparent));
-  -webkit-background-size: 14px 14px; }
+  border-radius: 0; }
 
 .p-snow_monkey_prepend_footer {
   border-radius: 0; }

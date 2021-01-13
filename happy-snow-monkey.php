@@ -102,12 +102,7 @@ add_action(
 	'snow_monkey_prepend_body',
 	function() {
 		?>
-		<!--
-		<div class="c-hsm-message-box">
-			<p>こちらに何か表示させたい場合は、<a href="<?php echo esc_url( home_url( '/snow_monkey_prepend_body' ) ); ?>">こちら</a>の記事を参照してください！</p>
-		</div>
-		-->
-		<a class="c-btn p-hsm-balloon c-blinking p-snow_monkey_prepend_body" href="<?php echo esc_url( home_url( '/snow_monkey_prepend_body' ) ); ?>" role="button">snow_monkey_prepend_bodyの応用</a>
+		<a class="c-btn c-btn--block c-blinking p-snow_monkey_prepend_body" href="<?php echo esc_url( home_url( '/snow_monkey_prepend_body' ) ); ?>" role="button">snow_monkey_prepend_bodyの応用</a>
 		<?php
 	}
 );
@@ -536,3 +531,23 @@ function add_page_slug_class_name( $classes ) {
 	}
 	return $classes;
 }
+
+/**
+ * Snow Monkey Form にイベント名を自動入力させるテスト
+ */
+add_filter(
+	'snow_monkey_forms/control/attributes',
+	function( $attributes ) {
+		// name 属性値を持つブロックが対象
+		// name が fullname という名前のとき
+		if ( isset( $attributes['name'] ) && 'event' === $attributes['name'] ) {
+			// ?post_id という URL クエリがあるときが対象
+			if ( ! is_null( $post_id ) ) {
+				$post_id = filter_input( INPUT_GET, 'post_id' );
+				// ?post_id で指定された投稿のタイトルを初期値をして設定
+				$attributes['value'] = get_the_title( $post_id );
+			}
+		}
+		return $attributes;
+	}
+);
