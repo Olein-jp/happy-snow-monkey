@@ -31,59 +31,6 @@
       font-size: 16px; } }
 
 /*--------------------------------------------------------------
-    Project
---------------------------------------------------------------*/
-.p-hsm-prepend-footer,
-.p-hsm-append-footer {
-  border-radius: 0; }
-
-.p-snow_monkey_prepend_drawer_nav {
-  margin: 15px;
-  padding: 10px; }
-
-.p-snow_monkey_append_drawer_nav {
-  margin: 15px;
-  padding: 10px; }
-
-.p-snow_monkey_prepend_body {
-  border-radius: 0; }
-
-.p-snow_monkey_prepend_footer {
-  border-radius: 0; }
-
-.p-snow_monkey_append_footer {
-  border-radius: 0; }
-
-.p-snow_monkey_prepend_main {
-  margin-bottom: 15px; }
-
-.p-snow_monkey_append_main {
-  margin-top: 50px; }
-
-.p-snow_monkey_prepend_contents {
-  border-radius: 0;
-  margin-bottom: 15px; }
-
-.p-snow_monkey_append_contents {
-  border-radius: 0;
-  margin-bottom: 30px; }
-
-.p-snow_monkey_before_contents_inner {
-  margin-bottom: 15px; }
-  @media screen and (min-width: 640px) {
-    .p-snow_monkey_before_contents_inner {
-      margin-bottom: 0; } }
-
-.p-snow_monkey_after_contents_inner {
-  margin-bottom: 30px; }
-
-.p-snow_monkey_entry_meta_items {
-  display: inline-block;
-  color: white !important;
-  padding: 5px 10px;
-  border-radius: 5px; }
-
-/*--------------------------------------------------------------
     Original Customize
 --------------------------------------------------------------*/
 .c-widget .c-entries--panel .c-entry-summary__meta {
