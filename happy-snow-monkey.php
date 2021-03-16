@@ -229,12 +229,12 @@ add_filter(
  * bodyタグにカテゴリースラッグをCSSクラス名に挿入
  */
 add_filter(
-		'body_class',
-	function () {
-			global $post;
-			foreach ( get_the_category( $post->ID ) as $category ) {
-				$classes[] = 'hsm-category-' . $category->category_nicename;
-			}
-			return $classes;
+	'body_class',
+	function ( $classes ) {
+		global $post;
+		foreach ( get_the_category( $post->ID ) as $category ) {
+			$classes[] = 'hsm-category-' . $category->category_nicename;
+		}
+		return $classes;
 	}
 );
