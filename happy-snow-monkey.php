@@ -219,6 +219,7 @@ add_filter(
 				$post_id = filter_input( INPUT_GET, 'post_id' );
 				// ?post_id で指定された投稿のタイトルを初期値をして設定
 				$attributes['value'] = get_the_title( $post_id );
+
 			}
 		}
 		return $attributes;
