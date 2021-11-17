@@ -13,6 +13,6 @@ HAPPY SNOW MONKEY とは、WordPress プレミアムテーマ [Snow Monkey](http
 ## コンテンツ修正依頼方法
 各コンテンツは、ページスラッグ名と同じマークダウンファイルにて管理されています。
 
-例えば、`https://happy-snow-monkey.olein-design.com/snow_monkey_prepend_body` というページのコンテンツは、`snow_monkey_prepend_body.md` というファイルで管理されています。
+例えば、`アクションフック` の `https://happy-snow-monkey.olein-design.com/snow_monkey_prepend_body` というページのコンテンツは、`action-hooks/snow_monkey_prepend_body.md` というファイルで管理されています。
 
 ですので、記述に間違いがあったり、最新ではない部分があった場合には、プルリクをお送り頂けると、こちらで確認後にマージすることができます。
