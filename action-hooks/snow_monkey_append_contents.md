@@ -1,6 +1,6 @@
 `<div class="l-contents" role="document">` の閉じタグ部分にHTMLを挿入する際に利用します。
 
-[snow_monkey_prepend_footer](http://happy-snow-monkey.olein-design.com/snow_monkey_prepend_footer/) の上部分になります。
+[snow_monkey_prepend_footer](https://happy-snow-monkey.olein-design.com/snow_monkey_prepend_footer/) の上部分になります。
 
 ## ソースコード
 ```php

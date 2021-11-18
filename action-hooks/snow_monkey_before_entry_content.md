@@ -1,6 +1,6 @@
 エントリーコンテンツの前に HTML を挿入する際に利用します。
 
-[snow_monkey_prepend_entry_content](http://happy-snow-monkey.olein-design.com/snow_monkey_prepend_entry_content/) に似た位置になります。
+[snow_monkey_prepend_entry_content](https://happy-snow-monkey.olein-design.com/snow_monkey_prepend_entry_content/) に似た位置になります。
 
 ## ソースコード
 ```php
