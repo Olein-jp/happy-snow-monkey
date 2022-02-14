@@ -1,4 +1,4 @@
-# HAPPY SNOW MONKEY コンテンツ管理用炉ポジ取り
+# HAPPY SNOW MONKEY コンテンツ管理用リポジトリ
 [HAPPY SNOW MONKEY](https://happy-snow-monkey.olein-design.com) のコンテンツ管理用リポジトリです。
 
 ## HAPPY SNOW MONKEY とは？
